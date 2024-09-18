@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Quest Editor</h1>
+    <form id="questForm">
+        <!-- Quest Information Section -->
+        <section id="questInfo">
+            <h2>Quest Information</h2>
+            <label for="questName">Quest Name:</label>
+            <input type="text" id="questName" name="questName" required><br>
+
+            <label for="requiresQuest">Requires Quest:</label>
+            <input type="text" id="requiresQuest" name="requiresQuest"><br>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required><br>
+        </section>
+
+        <!-- Objectives Section -->
+        <section id="objectives">
+            <h2>Objectives</h2>
+            <div id="objectivesContainer">
+                <!-- Initial Objective -->
+                <div class="objective-entry">
+                    <h4>Objective 1</h4>
+                    <label for="objectiveID1">Objective ID:</label>
+                    <input type="number" id="objectiveID1" name="objectiveID" required><br>
+
+                    <label for="objectiveDescription1">Objective Description:</label>
+                    <input type="text" id="objectiveDescription1" name="objectiveDescription"><br>
+
+                    <label for="objectiveType1">Objective Type:</label>
+                    <select id="objectiveType1" name="objectiveType" required>
+                        <option value="craftitem">Craft Item</option>
+                        <option value="tamedino">Tame Dino</option>
+                        <option value="killwild">Kill Wild Dino</option>
+                        <option value="killtamed">Kill Tamed Dino</option>
+                        <option value="killplayer">Kill Player</option>
+                        <option value="harvest">Harvest Resources</option>
+                        <option value="killstructure">Destroy Structure</option>
+                        <option value="playtime">Play Time</option>
+                        <option value="claimbaby">Claim Baby Dino</option>
+                        <option value="killboss">Kill Boss</option>
+                        <option value="buildstructure">Build Structure</option>
+                    </select><br>
+
+                    <label for="objectiveTarget1">Objective Target:</label>
+                    <input type="number" id="objectiveTarget1" name="objectiveTarget" required><br>
+
+                    <label for="trackBeforeAquired1">Track Before Acquired:</label>
+                    <select id="trackBeforeAquired1" name="trackBeforeAquired">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select><br>
+
+                    <label for="blueprints1">Blueprints (one per line):</label>
+                    <textarea id="blueprints1" name="blueprints" rows="4" placeholder="Enter one blueprint per line"></textarea><br>
+                </div>
+            </div>
+            <button type="button" id="addObjective">Add Another Objective</button>
+        </section>
+
+        <!-- Rewards Section -->
+        <section id="rewards">
+            <h2>Rewards</h2>
+            <div id="freeRewardSection">
+                <h3>Free Reward</h3>
+                <label for="freeRewardDescription">Reward Description:</label>
+                <input type="text" id="freeRewardDescription" name="freeRewardDescription"><br>
+
+                <label for="freeRewardIconPath">Reward Icon Path:</label>
+                <input type="text" id="freeRewardIconPath" name="freeRewardIconPath"><br>
+
+                <label for="freeRewardCommands">Commands (one per line):</label>
+                <textarea id="freeRewardCommands" name="freeRewardCommands" rows="4" placeholder="Enter one command per line"></textarea><br>
+            </div>
+
+            <div id="premiumRewardSection">
+                <h3>Premium Reward</h3>
+                <label for="premiumRewardDescription">Reward Description:</label>
+                <input type="text" id="premiumRewardDescription" name="premiumRewardDescription"><br>
+
+                <label for="premiumRewardIconPath">Reward Icon Path:</label>
+                <input type="text" id="premiumRewardIconPath" name="premiumRewardIconPath"><br>
+
+                <label for="premiumRewardCommands">Commands (one per line):</label>
+                <textarea id="premiumRewardCommands" name="premiumRewardCommands" rows="4" placeholder="Enter one command per line"></textarea><br>
+            </div>
+        </section>
+
+        <button type="button" id="addQuest">Add Quest</button>
+        <button type="button" id="downloadJson">Download JSON</button>
+    </form>
+
+    <h2>Quest List</h2>
+    <ul id="questList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
