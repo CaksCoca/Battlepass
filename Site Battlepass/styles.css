@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    background-image: url('background-image.jpg'); /* Optionnel : un fond de type nature ou technologie */
+    background-size: cover;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00ffcc;
+    text-shadow: 2px 2px 4px #000;
+    font-family: 'Orbitron', sans-serif; /* Utiliser une police qui donne un aspect technologique */
+}
+
+h4 {
+    color: #cccccc;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00ffcc;
+    padding-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #eaeaea;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #00ffcc;
+    font-size: 1em;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff0055;
+    box-shadow: 0 0 10px #ff0055;
+}
+
+button {
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 5px;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff0055;
+    box-shadow: 0 0 10px #ff0055;
+}
+
+button:active {
+    background-color: #00cc99;
+}
+
+#questForm {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
+#objectivesContainer, #rewards {
+    margin-top: 30px;
+}
+
+.objective-entry {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 5px solid #00ffcc;
+}
+
+#addObjective {
+    display: block;
+    margin: 20px auto;
+    background-color: #333;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+#confirmationMessage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Specific Hover and Active Effects */
+input:hover, select:hover {
+    border-color: #ff0055;
+}
+
+input:active, select:active {
+    border-color: #00ffcc;
+}
+
+/* Style for Reward Sections */
+#freeRewardSection, #premiumRewardSection {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-left: 5px solid #ff0055;
+}
+
+#freeRewardSection h3, #premiumRewardSection h3 {
+    color: #ff0055;
+}
+
+/* Styles pour les champs <textarea> */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical; /* Permet le redimensionnement uniquement verticalement */
+}
+
+/* Optionnel: Styles pour le focus du <textarea> */
+textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Enlève la bordure par défaut du navigateur */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre portée pour le focus */
+}
+
+/* CSS pour styliser le formulaire */
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* CSS pour les entrées de quêtes et les objectifs */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* CSS pour les boutons */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
